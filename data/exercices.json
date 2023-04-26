@@ -1,0 +1,82 @@
+[
+  {
+    "name": "Squats",
+    "description": "Squats are a compound exercise that work multiple muscle groups, including the quadriceps, glutes, hamstrings, lower back, and abs.",
+    "image": ""
+  },
+  {
+    "name": "Bench Press",
+    "description": "The bench press is a weightlifting exercise that primarily targets the chest, shoulders, and triceps.",
+    "image": ""
+  },
+  {
+    "name": "Deadlifts",
+    "description": "Deadlifts are a compound exercise that work multiple muscle groups, including the lower back, glutes, hamstrings, quadriceps, and forearms.",
+    "image": ""
+  },
+  {
+    "name": "Push-ups",
+    "description": "Push-ups are a bodyweight exercise that work the chest, shoulders, triceps, and abs.",
+    "image": ""
+  },
+  {
+    "name": "Pull-ups",
+    "description": "Pull-ups are a compound exercise that work multiple muscle groups, including the back, shoulders, biceps, and forearms.",
+    "image": ""
+  },
+  {
+    "name": "Military Press",
+    "description": "The military press, also known as the overhead press, is a weightlifting exercise that targets the shoulders and triceps.",
+    "image": ""
+  },
+  {
+    "name": "Lunges",
+    "description": "Lunges are a lower body exercise that work the quadriceps, glutes, and hamstrings.",
+    "image": ""
+  },
+  {
+    "name": "Dumbbell Flys",
+    "description": "Dumbbell flys are an isolation exercise that work the chest and shoulders.",
+    "image": ""
+  },
+  {
+    "name": "Plank",
+    "description": "The plank is a bodyweight exercise that targets the core muscles, including the abs, lower back, and glutes.",
+    "image": ""
+  },
+  {
+    "name": "Leg Press",
+    "description": "The leg press is a weightlifting exercise that primarily targets the quadriceps, hamstrings, and glutes.",
+    "image": ""
+  },
+  {
+    "name": "Chin-ups",
+    "description": "Chin-ups are a compound exercise that work multiple muscle groups, including the back, biceps, and forearms.",
+    "image": ""
+  },
+  {
+    "name": "Bicep Curls",
+    "description": "Bicep curls are an isolation exercise that work the biceps.",
+    "image": ""
+  },
+  {
+    "name": "Tricep Dips",
+    "description": "Tricep dips are a bodyweight exercise that work the triceps.",
+    "image": ""
+  },
+  {
+    "name": "Calf Raises",
+    "description": "Calf raises are an isolation exercise that work the calf muscles.",
+    "image": ""
+  },
+  {
+    "name": "Crunches",
+    "description": "Crunches are a bodyweight exercise that work the abs.",
+    "image": ""
+  },
+  {
+    "name": "Russian Twists",
+    "description": "Russian twists are a bodyweight exercise that work the obliques.",
+    "image": ""
+  }
+]
