@@ -10,13 +10,14 @@ export namespace ExercicesHelper {
   export const createExercices = (
     name: string,
     description: string,
-    image: string
+    image: string,
+    machine: number
   ): void => {
     database
       .prepare(
-        "INSERT INTO exercices (name, description, image) VALUES (?, ?, ?)"
+        "INSERT INTO exercices (name, description, image, machine) VALUES (?, ?, ?, ?)"
       )
-      .run(name, description, image);
+      .run(name, description, image, machine);
   };
 
   export const getExercicesById = (id: string): Exercices => {

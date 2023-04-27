@@ -1,37 +1,37 @@
 import { Request, Response } from "express";
-import { ExercicesService } from "../services/exercices";
+import { UserService } from "../services/user";
 const route = require("express").Router();
 
 route.get("/", (req: Request, res: Response) => {
-  const exercices = ExercicesService.getAllExercices();
-  res.send(exercices);
+  const user = UserService.getAllUser();
+  res.send(user);
 });
 
 route.get("/save", (req: Request, res: Response) => {
-  ExercicesService.saveExercices();
+  UserService.saveUser();
   res.sendStatus(200);
 });
 
 route.get("/load", (req: Request, res: Response) => {
-  ExercicesService.loadExercices();
+  UserService.loadUser();
   res.sendStatus(200);
 });
 
 route.post("/create", (req: Request, res: Response) => {
-  const { name, description, image, machine } = req.body;
-  ExercicesService.createExercices(name, description, image, machine);
+  const { firstname, lastname, username, age, sexe, email } = req.body;
+  UserService.createUser(firstname, lastname, username, age, sexe, email);
   res.sendStatus(201);
 });
 
 route.get("/:id", (req: Request, res: Response) => {
   const { id } = req.params;
-  const exercices = ExercicesService.getExercicesById(id);
-  res.send(exercices);
+  const user = UserService.getUserById(id);
+  res.send(user);
 });
 
 route.get("/delete/:id", (req: Request, res: Response) => {
   const { id } = req.params;
-  ExercicesService.deleteExercicesById(id);
+  UserService.deleteUserById(id);
   res.sendStatus(204);
 });
 

@@ -3,4 +3,5 @@ export interface Exercices {
   name: string;
   description: string;
   image: string;
+  machine: number;
 }

@@ -1,82 +1,183 @@
 [
   {
-    "name": "Squats",
-    "description": "Squats are a compound exercise that work multiple muscle groups, including the quadriceps, glutes, hamstrings, lower back, and abs.",
-    "image": ""
+    "name": "Squat",
+    "description": "The squat is a compound exercise that primarily targets the muscles of the thighs, hips and buttocks. It is one of the best exercises for building lower body strength and power.",
+    "image": "",
+    "machine": 0
   },
   {
-    "name": "Bench Press",
-    "description": "The bench press is a weightlifting exercise that primarily targets the chest, shoulders, and triceps.",
-    "image": ""
+    "name": "Lunge",
+    "description": "The lunge is a unilateral lower body exercise that targets the muscles of the quads, glutes, and hamstrings. It can be performed with bodyweight or with added weight for increased resistance.",
+    "image": "",
+    "machine": 0
   },
   {
-    "name": "Deadlifts",
-    "description": "Deadlifts are a compound exercise that work multiple muscle groups, including the lower back, glutes, hamstrings, quadriceps, and forearms.",
-    "image": ""
-  },
-  {
-    "name": "Push-ups",
-    "description": "Push-ups are a bodyweight exercise that work the chest, shoulders, triceps, and abs.",
-    "image": ""
-  },
-  {
-    "name": "Pull-ups",
-    "description": "Pull-ups are a compound exercise that work multiple muscle groups, including the back, shoulders, biceps, and forearms.",
-    "image": ""
-  },
-  {
-    "name": "Military Press",
-    "description": "The military press, also known as the overhead press, is a weightlifting exercise that targets the shoulders and triceps.",
-    "image": ""
-  },
-  {
-    "name": "Lunges",
-    "description": "Lunges are a lower body exercise that work the quadriceps, glutes, and hamstrings.",
-    "image": ""
-  },
-  {
-    "name": "Dumbbell Flys",
-    "description": "Dumbbell flys are an isolation exercise that work the chest and shoulders.",
-    "image": ""
-  },
-  {
-    "name": "Plank",
-    "description": "The plank is a bodyweight exercise that targets the core muscles, including the abs, lower back, and glutes.",
-    "image": ""
+    "name": "Deadlift",
+    "description": "The deadlift is a compound exercise that targets the muscles of the legs, back, and core. It is an excellent exercise for building total body strength and power.",
+    "image": "",
+    "machine": 0
   },
   {
     "name": "Leg Press",
-    "description": "The leg press is a weightlifting exercise that primarily targets the quadriceps, hamstrings, and glutes.",
-    "image": ""
+    "description": "The leg press is a machine-based exercise that targets the muscles of the quads, hamstrings, and glutes. It can be a good alternative to squats for those with mobility or injury issues.",
+    "image": "",
+    "machine": 1
   },
   {
-    "name": "Chin-ups",
-    "description": "Chin-ups are a compound exercise that work multiple muscle groups, including the back, biceps, and forearms.",
-    "image": ""
+    "name": "Calf Raise",
+    "description": "The calf raise is an isolation exercise that targets the muscles of the calves. It can be performed with bodyweight or with added weight for increased resistance.",
+    "image": "",
+    "machine": 0
   },
   {
-    "name": "Bicep Curls",
-    "description": "Bicep curls are an isolation exercise that work the biceps.",
-    "image": ""
+    "name": "Leg Extension",
+    "description": "The leg extension is a machine-based exercise that targets the muscles of the quads. It can be a good exercise for isolating the quads and improving their strength and size.",
+    "image": "",
+    "machine": 1
   },
   {
-    "name": "Tricep Dips",
-    "description": "Tricep dips are a bodyweight exercise that work the triceps.",
-    "image": ""
+    "name": "Hamstring Curl",
+    "description": "The hamstring curl is a machine-based exercise that targets the muscles of the hamstrings. It can be a good exercise for isolating the hamstrings and improving their strength and size.",
+    "image": "",
+    "machine": 1
   },
   {
-    "name": "Calf Raises",
-    "description": "Calf raises are an isolation exercise that work the calf muscles.",
-    "image": ""
+    "name": "Front Squat",
+    "description": "The front squat is a variation of the squat where the barbell is held in front of the body. It primarily targets the muscles of the quads, but also works the core and upper back.",
+    "image": "",
+    "machine": 0
   },
   {
-    "name": "Crunches",
-    "description": "Crunches are a bodyweight exercise that work the abs.",
-    "image": ""
+    "name": "Romanian Deadlift",
+    "description": "The Romanian deadlift is a variation of the deadlift that primarily targets the muscles of the hamstrings and glutes. It is also a good exercise for improving hip mobility and flexibility.",
+    "image": "",
+    "machine": 0
+  },
+
+  {
+    "name": "Bench Press",
+    "description": "The bench press is a compound exercise that primarily targets the muscles of the chest, shoulders, and triceps. It is one of the best exercises for building upper body strength and size.",
+    "image": "",
+    "machine": 0
   },
   {
-    "name": "Russian Twists",
-    "description": "Russian twists are a bodyweight exercise that work the obliques.",
-    "image": ""
+    "name": "Incline Bench Press",
+    "description": "The incline bench press is a variation of the bench press that targets the upper portion of the chest. It is performed on a bench that is set at an incline, usually between 30 and 45 degrees.",
+    "image": "",
+    "machine": 0
+  },
+  {
+    "name": "Dumbbell Fly",
+    "description": "The dumbbell fly is an isolation exercise that primarily targets the muscles of the chest. It can be performed with dumbbells or a cable machine for increased resistance.",
+    "image": "",
+    "machine": 1
+  },
+  {
+    "name": "Dumbbell Bench Press",
+    "description": "The dumbbell bench press is a variation of the bench press that can help to increase unilateral strength and stability. It is performed with dumbbells instead of a barbell.",
+    "image": "",
+    "machine": 1
+  },
+  {
+    "name": "Chest Press Machine",
+    "description": "The chest press machine is a weight machine that targets the muscles of the chest, shoulders, and triceps. It can be a good exercise for beginners or those with limited mobility.",
+    "image": "",
+    "machine": 1
+  },
+  {
+    "name": "Weighted Chest Dip",
+    "description": "The weighted chest dip is a bodyweight exercise that can be made more challenging by adding weight. It primarily targets the muscles of the chest, shoulders, and triceps.",
+    "image": "",
+    "machine": 0
+  },
+  {
+    "name": "Cable Crossover",
+    "description": "The cable crossover is an isolation exercise that targets the muscles of the chest. It is performed using a cable machine and can be a good exercise for developing the inner portion of the chest.",
+    "image": "",
+    "machine": 1
+  },
+  {
+    "name": "Cable Chest Press",
+    "description": "The cable chest press is an exercise that targets the muscles of the chest, shoulders, and triceps. It is performed using a cable machine and can be a good exercise for increasing chest strength and stability.",
+    "image": "",
+    "machine": 1
+  },
+  {
+    "name": "Deadlift",
+    "description": "The deadlift is a compound exercise that targets the muscles of the back, legs, and glutes. It is one of the best exercises for building overall strength and size.",
+    "image": "",
+    "machine": 0
+  },
+  {
+    "name": "Barbell Row",
+    "description": "The barbell row is a compound exercise that primarily targets the muscles of the back, shoulders, and biceps. It is performed by lifting a barbell from the ground and pulling it towards your chest.",
+    "image": "",
+    "machine": 0
+  },
+  {
+    "name": "Lat Pulldown",
+    "description": "The lat pulldown is an exercise that targets the muscles of the back and shoulders. It is performed using a cable machine and can be a good exercise for increasing upper body strength and size.",
+    "image": "",
+    "machine": 1
+  },
+  {
+    "name": "T-bar Row",
+    "description": "The T-bar row is a compound exercise that primarily targets the muscles of the back, shoulders, and biceps. It is performed using a barbell or T-bar machine and can be a good exercise for building upper body strength and size.",
+    "image": "",
+    "machine": 1
+  },
+  {
+    "name": "Seated Cable Row",
+    "description": "The seated cable row is an exercise that targets the muscles of the back, shoulders, and biceps. It is performed using a cable machine and can be a good exercise for increasing upper body strength and size.",
+    "image": "",
+    "machine": 1
+  },
+  {
+    "name": "One-Arm Dumbbell Row",
+    "description": "The one-arm dumbbell row is an exercise that targets the muscles of the back, shoulders, and biceps. It is performed using a dumbbell and can be a good exercise for building unilateral strength and stability.",
+    "image": "",
+    "machine": 0
+  },
+  {
+    "name": "Hyperextension",
+    "description": "The hyperextension is an exercise that targets the muscles of the lower back, glutes, and hamstrings. It is performed using a hyperextension bench or other equipment and can be a good exercise for improving lower back strength and stability.",
+    "image": "",
+    "machine": 1
+  },
+  {
+    "name": "Barbell Curl",
+    "description": "The barbell curl is a classic biceps exercise that targets the muscles of the upper arms. It is performed by lifting a barbell with an underhand grip and curling it towards your chest.",
+    "image": "",
+    "machine": 0
+  },
+  {
+    "name": "Preacher Curl",
+    "description": "The preacher curl is an isolation exercise that targets the biceps muscles. It is performed using a special bench that supports the arms and elbows and can be a good exercise for building muscle definition and size.",
+    "image": "",
+    "machine": 1
+  },
+  {
+    "name": "Concentration Curl",
+    "description": "The concentration curl is an isolation exercise that targets the biceps muscles. It is performed using a dumbbell and can be a good exercise for building muscle definition and strength.",
+    "image": "",
+    "machine": 0
+  },
+  {
+    "name": "Hammer Curl",
+    "description": "The hammer curl is an exercise that targets the biceps and forearm muscles. It is performed using dumbbells with a neutral grip and can be a good exercise for building overall arm strength and size.",
+    "image": "",
+    "machine": 0
+  },
+  {
+    "name": "Reverse Curl",
+    "description": "The reverse curl is an exercise that targets the muscles of the forearms and biceps. It is performed using a barbell with an overhand grip and can be a good exercise for building overall arm strength and size.",
+    "image": "",
+    "machine": 0
+  },
+  {
+    "name": "Incline Dumbbell Curl",
+    "description": "The incline dumbbell curl is a variation of the dumbbell curl that targets the biceps muscles. It is performed using a bench set at a slight incline and can be a good exercise for building upper arm strength and size.",
+    "image": "",
+    "machine": 0
   }
 ]
