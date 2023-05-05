@@ -10,9 +10,20 @@ const connection = (): Promise<void> => {
 const createDatabase = (db: Database): void => {
   db.prepare(
     `
+    CREATE TABLE IF NOT EXISTS categories
+    (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    name VARCHAR NOT NULL
+    )
+    `
+  ).run();
+
+  db.prepare(
+    `
     CREATE TABLE IF NOT EXISTS exercices
     (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
+    category INTEGER NOT NULL REFERENCES categories(id) ON DELETE CASCADE,
     name VARCHAR NOT NULL,
     description VARCHAR NOT NULL,
     image VARCHAR NOT NULL,

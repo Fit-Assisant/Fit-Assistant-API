@@ -1,37 +1,37 @@
 import { Request, Response } from "express";
-import { ExercicesService } from "../services/exercices";
+import { CategoriesService } from "../services/categories";
 const route = require("express").Router();
 
 route.get("/", (req: Request, res: Response) => {
-  const exercices = ExercicesService.getAllExercices();
+  const exercices = CategoriesService.getAllCategories();
   res.send(exercices);
 });
 
 route.get("/save", (req: Request, res: Response) => {
-  ExercicesService.saveExercices();
+  CategoriesService.saveCategories();
   res.sendStatus(200);
 });
 
 route.get("/load", (req: Request, res: Response) => {
-  ExercicesService.loadExercices();
+  CategoriesService.loadCategories();
   res.sendStatus(200);
 });
 
 route.post("/create", (req: Request, res: Response) => {
-  const { name, category, description, image, machine } = req.body;
-  ExercicesService.createExercices(name, category, description, image, machine);
+  const { name } = req.body;
+  CategoriesService.createCategories(name);
   res.sendStatus(201);
 });
 
 route.get("/:id", (req: Request, res: Response) => {
   const { id } = req.params;
-  const exercices = ExercicesService.getExercicesById(id);
+  const exercices = CategoriesService.getCategoriesById(id);
   res.send(exercices);
 });
 
 route.get("/delete/:id", (req: Request, res: Response) => {
   const { id } = req.params;
-  ExercicesService.deleteExercicesById(id);
+  CategoriesService.deleteCategoriesById(id);
   res.sendStatus(204);
 });
 
