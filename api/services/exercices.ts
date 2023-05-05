@@ -23,6 +23,7 @@ export namespace ExercicesService {
     data.forEach((exercices: Exercices) => {
       ExercicesHelper.createExercices(
         exercices.name,
+        exercices.category,
         exercices.description,
         exercices.image,
         exercices.machine
@@ -31,11 +32,18 @@ export namespace ExercicesService {
   };
   export const createExercices = (
     name: string,
+    category: number,
     description: string,
     image: string,
     machine: number
   ): void => {
-    ExercicesHelper.createExercices(name, description, image, machine);
+    ExercicesHelper.createExercices(
+      name,
+      category,
+      description,
+      image,
+      machine
+    );
   };
 
   export const getExercicesById = (id: string): Exercices => {
