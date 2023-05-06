@@ -1,0 +1,170 @@
+[
+  {
+    "name": "Bench Press",
+    "category": 6,
+    "description": "The bench press is a compound exercise that targets the chest, triceps, and shoulders. It involves lying on a bench and lifting a loaded barbell off a rack, lowering it to the chest, then pushing it back up to the starting position.",
+    "image": "",
+    "machine": 1,
+    "muscles": [5, 6, 7]
+  },
+  {
+    "name": "Pull-up",
+    "category": 2,
+    "description": "The pull-up is a compound exercise that targets the back, biceps, and shoulders. It involves hanging from a bar and pulling the body up until the chin is above the bar, then lowering back down to the starting position.",
+    "image": "",
+    "machine": 0,
+    "muscles": [8, 9, 10]
+  },
+  {
+    "name": "Dumbbell Curl",
+    "category": 1,
+    "description": "The dumbbell curl is an isolation exercise that targets the biceps. It involves holding a dumbbell in each hand and curling them up towards the shoulders, then lowering them back down to the starting position.",
+    "image": "",
+    "machine": 0,
+    "muscles": [9]
+  },
+  {
+    "name": "Deadlift",
+    "category": 3,
+    "description": "The deadlift is a compound exercise that targets the back, legs, and grip strength. It involves lifting a loaded barbell off the ground and standing up straight with the weight, then lowering it back down to the starting position.",
+    "image": "",
+    "machine": 1,
+    "muscles": [11, 12, 13, 14, 15]
+  },
+  {
+    "name": "Barbell Squat",
+    "category": 3,
+    "description": "The barbell squat is a compound exercise that targets the quadriceps, hamstrings, glutes, and core. It involves placing a loaded barbell across the shoulders and squatting down to a parallel position, then standing back up.",
+    "image": "",
+    "machine": 1,
+    "muscles": [1, 2, 3, 4]
+  },
+  {
+    "name": "Bench Press",
+    "category": 6,
+    "description": "The bench press is a compound exercise that targets the chest, triceps, and shoulders. It involves lying on a bench and lifting a loaded barbell off a rack, lowering it to the chest, then pushing it back up to the starting position.",
+    "image": "",
+    "machine": 1,
+    "muscles": [5, 6, 7]
+  },
+  {
+    "name": "Pull-up",
+    "category": 2,
+    "description": "The pull-up is a compound exercise that targets the back, biceps, and shoulders. It involves hanging from a bar and pulling the body up until the chin is above the bar, then lowering back down to the starting position.",
+    "image": "",
+    "machine": 0,
+    "muscles": [8, 9, 7]
+  },
+  {
+    "name": "Dumbbell Curl",
+    "category": 1,
+    "description": "The dumbbell curl is an isolation exercise that targets the biceps. It involves holding a dumbbell in each hand and curling them up towards the shoulders, then lowering them back down to the starting position.",
+    "image": "",
+    "machine": 0,
+    "muscles": [9]
+  },
+  {
+    "name": "Deadlift",
+    "category": 3,
+    "description": "The deadlift is a compound exercise that targets the back, legs, and grip strength. It involves lifting a loaded barbell off the ground and standing up straight with the weight, then lowering it back down to the starting position.",
+    "image": "",
+    "machine": 1,
+    "muscles": [8, 3, 4]
+  },
+  {
+    "name": "Push-up",
+    "category": 6,
+    "description": "The push-up is a bodyweight exercise that targets the chest, triceps, and shoulders. It involves lowering the body down towards the ground and pushing back up to the starting position.",
+    "image": "",
+    "machine": 0,
+    "muscles": [5, 6, 7]
+  },
+  {
+    "name": "Seated Row",
+    "category": 2,
+    "description": "The seated row is a machine exercise that targets the back, biceps, and shoulders. It involves sitting on a rowing machine and pulling the handle towards the body, then releasing back to the starting position.",
+    "image": "",
+    "machine": 1,
+    "muscles": [8, 9, 7]
+  },
+  {
+    "name": "Dumbbell Fly",
+    "category": 6,
+    "description": "The dumbbell fly is an isolation exercise that targets the chest. It involves lying on a bench with a dumbbell in each hand and lifting the weights out to the sides, then lowering them back down to the starting position.",
+    "image": "",
+    "machine": 0,
+    "muscles": [1]
+  },
+  {
+    "name": "Leg Press",
+    "category": 3,
+    "description": "The leg press is a machine exercise that targets the quadriceps, hamstrings, and glutes. It involves sitting on a machine and pushing a weighted plate away from the body with the legs, then releasing back to the starting position.",
+    "image": "",
+    "machine": 0,
+    "muscles": [2, 3, 4]
+  },
+  {
+    "name": "Chin-up",
+    "category": 2,
+    "description": "The chin-up is a bodyweight exercise that targets the back, biceps, and shoulders. It involves hanging from a bar with an underhand grip and pulling the body up until the chin is above the bar, then lowering back down to the starting position.",
+    "image": "",
+    "machine": 0,
+    "muscles": [5, 6, 7]
+  },
+  {
+    "name": "Triceps Extension",
+    "category": 1,
+    "description": "The triceps extension is an isolation exercise that targets the triceps. It involves holding a dumbbell in both hands and extending the arms overhead, then lowering the weight back down behind the head and extending back up to the starting position.",
+    "image": "",
+    "machine": 0,
+    "muscles": [8]
+  },
+  {
+    "name": "Calf Raise",
+    "category": 3,
+    "description": "The calf raise is an isolation exercise that targets the calves. It involves standing on a raised surface and lifting the heels up, then lowering back down to the starting position.",
+    "image": "",
+    "machine": 0,
+    "muscles": [9]
+  },
+  {
+    "name": "Dumbbell Press",
+    "category": 6,
+    "description": "The dumbbell press is a compound exercise that targets the chest, shoulders, and triceps. It involves lying on a bench with a dumbbell in each hand and pressing the weights up over the chest, then lowering them back down to the starting position.",
+    "image": "",
+    "machine": 0,
+    "muscles": [1, 5, 8]
+  },
+  {
+    "name": "Lat Pulldown",
+    "category": 2,
+    "description": "The lat pulldown is a machine exercise that targets the back, biceps, and shoulders. It involves sitting on a pulldown machine and pulling the bar down towards the chest, then releasing back to the starting position.",
+    "image": "",
+    "machine": 1,
+    "muscles": [2, 3, 4]
+  },
+  {
+    "name": "Hammer Curl",
+    "category": 1,
+    "description": "The hammer curl is an isolation exercise that targets the biceps and forearms. It involves holding a dumbbell in each hand with a neutral grip and curling the weights up towards the shoulders, then lowering them back down to the starting position.",
+    "image": "",
+    "machine": 0,
+    "muscles": [1, 5]
+  },
+  {
+    "name": "Leg Extension",
+    "category": 3,
+    "description": "The leg extension is a machine exercise that targets the quadriceps. It involves sitting on a machine and extending the legs out in front of the body against resistance, then releasing back to the starting position.",
+    "image": "",
+    "machine": 1,
+    "muscles": [4]
+  },
+  {
+    "name": "Incline Bench Press",
+    "category": 6,
+    "description": "The incline bench press is a compound exercise that targets the upper chest, shoulders, and triceps. It involves lying on an inclined bench with a loaded barbell and pressing the weight up and away from the chest, then lowering it back down to the starting position.",
+    "image": "",
+    "machine": 1,
+    "muscles": [2, 3, 6]
+  }
+]

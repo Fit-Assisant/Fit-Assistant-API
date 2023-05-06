@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "name": "Grand pectoral"
+  },
+  {
+    "id": 2,
+    "name": "Biceps brachial"
+  },
+  {
+    "id": 3,
+    "name": "Triceps brachial"
+  },
+  {
+    "id": 4,
+    "name": "Deltoïde antérieur"
+  },
+  {
+    "id": 5,
+    "name": "Deltoïde moyen"
+  },
+  {
+    "id": 6,
+    "name": "Deltoïde postérieur"
+  },
+  {
+    "id": 7,
+    "name": "Grand dorsal"
+  },
+  {
+    "id": 8,
+    "name": "Grand rond"
+  },
+  {
+    "id": 9,
+    "name": "Trapèze"
+  },
+  {
+    "id": 10,
+    "name": "Rhomboïde"
+  },
+  {
+    "id": 11,
+    "name": "Quadriceps"
+  },
+  {
+    "id": 12,
+    "name": "Ischio-jambiers"
+  },
+  {
+    "id": 13,
+    "name": "Fessiers"
+  },
+  {
+    "id": 14,
+    "name": "Mollets"
+  },
+  {
+    "id": 15,
+    "name": "Abdominaux"
+  },
+  {
+    "id": 16,
+    "name": "Lombaires"
+  },
+  {
+    "id": 17,
+    "name": "Grand adducteur"
+  },
+  {
+    "id": 18,
+    "name": "Petits adducteurs"
+  },
+  {
+    "id": 19,
+    "name": "Tenseur du fascia lata"
+  },
+  {
+    "id": 20,
+    "name": "Gastrocnémien"
+  },
+  {
+    "id": 21,
+    "name": "Soleaire"
+  },
+  {
+    "id": 22,
+    "name": "Tibial antérieur"
+  },
+  {
+    "id": 23,
+    "name": "Long supinateur du pouce"
+  },
+  {
+    "id": 24,
+    "name": "Court fléchisseur du pouce"
+  },
+  {
+    "id": 25,
+    "name": "Fléchisseur superficiel des doigts"
+  },
+  {
+    "id": 26,
+    "name": "Fléchisseur radial du carpe"
+  },
+  {
+    "id": 27,
+    "name": "Fléchisseur ulnaire du carpe"
+  },
+  {
+    "id": 28,
+    "name": "Abducteurs de la hanche"
+  },
+  {
+    "id": 29,
+    "name": "Rotateurs externes de la hanche"
+  },
+  {
+    "id": 30,
+    "name": "Rotateurs internes de la hanche"
+  }
+]
