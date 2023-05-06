@@ -7,5 +7,5 @@ export interface Programs {
   description: string;
   visible: number;
   published: number;
-  exercices: Array<Series>;
+  exercises: Array<Series>;
 }

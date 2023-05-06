@@ -48,17 +48,17 @@ export namespace ProgramsService {
     ProgramsHelper.deleteProgramsById(id);
   };
 
-  export const addingExercicesToPrograms = (
+  export const addingExercisesToPrograms = (
     program_id: number,
-    exercices_id: number,
+    exercises_id: number,
     duration: number,
     repetitions: number,
     series: number,
     intensity: number
   ): void => {
-    ProgramsHelper.addingExercicesToPrograms(
+    ProgramsHelper.addingExercisesToPrograms(
       program_id,
-      exercices_id,
+      exercises_id,
       duration,
       repetitions,
       series,

@@ -20,7 +20,7 @@ const createDatabase = (db: Database): void => {
 
   db.prepare(
     `
-    CREATE TABLE IF NOT EXISTS exercices
+    CREATE TABLE IF NOT EXISTS exercises
     (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     category INTEGER NOT NULL REFERENCES categories(id) ON DELETE CASCADE,
@@ -62,16 +62,37 @@ const createDatabase = (db: Database): void => {
 
   db.prepare(
     `
-    CREATE TABLE IF NOT EXISTS programs_exercices
+    CREATE TABLE IF NOT EXISTS programs_exercises
     (
     program INTEGER NOT NULL REFERENCES programs(id) ON DELETE CASCADE,
-    exercice INTEGER NOT NULL REFERENCES exercices(id) ON DELETE CASCADE,
+    exercise INTEGER NOT NULL REFERENCES exercises(id) ON DELETE CASCADE,
     sorting INTEGER NOT NULL,
     duration FLOAT DEFAULT NULL,
     repetitions INTEGER DEFAULT NULL,
     series INTEGER DEFAULT NULL,
     intensity INTEGER DEFAULT NULL,
-    PRIMARY KEY (program, exercice, sorting)
+    PRIMARY KEY (program, exercise, sorting)
+    )
+    `
+  ).run();
+
+  db.prepare(
+    `
+    CREATE TABLE IF NOT EXISTS muscles
+    (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    name VARCHAR NOT NULL
+    )
+    `
+  ).run();
+
+  db.prepare(
+    `
+    CREATE TABLE IF NOT EXISTS exercises_muscles
+    (
+    muscle INTEGER NOT NULL REFERENCES muscles(id) ON DELETE CASCADE,
+    exercise INTEGER NOT NULL REFERENCES exercises(id) ON DELETE CASCADE,
+    PRIMARY KEY (muscle, exercise)
     )
     `
   ).run();

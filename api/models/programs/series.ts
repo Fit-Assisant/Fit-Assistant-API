@@ -1,11 +1,11 @@
-import { Exercices } from "../exercices/exercices";
+import { Exercises } from "../exercises/exercises";
 
 export interface Series {
-  exercice: number;
+  exercise: number;
   sorting: number;
   duration: number;
   repetitions: number;
   series: number;
   intensity: number;
-  details: Exercices;
+  details: Exercises;
 }

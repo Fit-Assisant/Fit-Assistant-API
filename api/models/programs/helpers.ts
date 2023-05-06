@@ -1,14 +1,14 @@
 import { Programs } from "./programs";
 import { Series } from "./series";
 import { database } from "../../config/database";
-import { Exercices } from "../exercices/exercices";
+import { Exercises } from "../exercises/exercises";
 export namespace ProgramsHelper {
   export const getAllPrograms = (): Array<Programs> => {
     const programs = database
       .prepare("SELECT * FROM programs")
       .all() as Array<Programs>;
     programs.forEach((program: Programs) => {
-      program.exercices = getDetailedProgramsById(program.id.toString());
+      program.exercises = getDetailedProgramsById(program.id.toString());
     });
     return programs;
   };
@@ -29,12 +29,12 @@ export namespace ProgramsHelper {
 
   export const getDetailedProgramsById = (id: string): Array<Series> => {
     const series = database
-      .prepare("SELECT * FROM programs_exercices WHERE program = ?")
+      .prepare("SELECT * FROM programs_exercises WHERE program = ?")
       .all(id) as Array<Series>;
     series.forEach((serie: Series) => {
       serie.details = database
-        .prepare("SELECT * FROM exercices WHERE id = ?")
-        .get(serie.exercice) as Exercices;
+        .prepare("SELECT * FROM exercises WHERE id = ?")
+        .get(serie.exercise) as Exercises;
     });
     return series;
   };
@@ -43,7 +43,7 @@ export namespace ProgramsHelper {
     const program = database
       .prepare("SELECT * FROM programs WHERE id = ?")
       .get(id) as Programs;
-    program.exercices = getDetailedProgramsById(id);
+    program.exercises = getDetailedProgramsById(id);
     return program;
   };
 
@@ -51,9 +51,9 @@ export namespace ProgramsHelper {
     database.prepare("DELETE FROM programs WHERE id = ?").run(id);
   };
 
-  export const addingExercicesToPrograms = (
+  export const addingExercisesToPrograms = (
     program_id: number,
-    exercices_id: number,
+    exercises_id: number,
     duration: number,
     repetitions: number,
     series: number,
@@ -62,7 +62,7 @@ export namespace ProgramsHelper {
     const sorting = (
       database
         .prepare(
-          "SELECT MAX(sorting) as maxSorting FROM programs_exercices WHERE program = ?"
+          "SELECT MAX(sorting) as maxSorting FROM programs_exercises WHERE program = ?"
         )
         .get(program_id) as any
     ).maxSorting;
@@ -73,11 +73,11 @@ export namespace ProgramsHelper {
 
     database
       .prepare(
-        "INSERT INTO programs_exercices (program, exercice, sorting, duration, repetitions, series, intensity) VALUES (?, ?, ?, ?, ?, ?, ?)"
+        "INSERT INTO programs_exercises (program, exercise, sorting, duration, repetitions, series, intensity) VALUES (?, ?, ?, ?, ?, ?, ?)"
       )
       .run(
         program_id,
-        exercices_id,
+        exercises_id,
         sorting + 1,
         duration,
         repetitions,

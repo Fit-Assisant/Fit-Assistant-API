@@ -1,37 +1,44 @@
 import { Request, Response } from "express";
-import { ExercicesService } from "../services/exercices";
+import { ExercisesService } from "../services/exercises";
 const route = require("express").Router();
 
 route.get("/", (req: Request, res: Response) => {
-  const exercices = ExercicesService.getAllExercices();
-  res.send(exercices);
+  const exercises = ExercisesService.getAllExercises();
+  res.send(exercises);
 });
 
 route.get("/save", (req: Request, res: Response) => {
-  ExercicesService.saveExercices();
+  ExercisesService.saveExercises();
   res.sendStatus(200);
 });
 
 route.get("/load", (req: Request, res: Response) => {
-  ExercicesService.loadExercices();
+  ExercisesService.loadExercises();
   res.sendStatus(200);
 });
 
 route.post("/create", (req: Request, res: Response) => {
-  const { name, category, description, image, machine } = req.body;
-  ExercicesService.createExercices(name, category, description, image, machine);
+  const { name, category, description, image, machine, muscles } = req.body;
+  ExercisesService.createExercises(
+    name,
+    category,
+    description,
+    image,
+    machine,
+    muscles
+  );
   res.sendStatus(201);
 });
 
 route.get("/:id", (req: Request, res: Response) => {
   const { id } = req.params;
-  const exercices = ExercicesService.getExercicesById(id);
-  res.send(exercices);
+  const exercises = ExercisesService.getExercisesById(id);
+  res.send(exercises);
 });
 
 route.get("/delete/:id", (req: Request, res: Response) => {
   const { id } = req.params;
-  ExercicesService.deleteExercicesById(id);
+  ExercisesService.deleteExercisesById(id);
   res.sendStatus(204);
 });
 

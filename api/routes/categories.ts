@@ -3,8 +3,8 @@ import { CategoriesService } from "../services/categories";
 const route = require("express").Router();
 
 route.get("/", (req: Request, res: Response) => {
-  const exercices = CategoriesService.getAllCategories();
-  res.send(exercices);
+  const exercises = CategoriesService.getAllCategories();
+  res.send(exercises);
 });
 
 route.get("/save", (req: Request, res: Response) => {
@@ -25,8 +25,8 @@ route.post("/create", (req: Request, res: Response) => {
 
 route.get("/:id", (req: Request, res: Response) => {
   const { id } = req.params;
-  const exercices = CategoriesService.getCategoriesById(id);
-  res.send(exercices);
+  const exercises = CategoriesService.getCategoriesById(id);
+  res.send(exercises);
 });
 
 route.get("/delete/:id", (req: Request, res: Response) => {
