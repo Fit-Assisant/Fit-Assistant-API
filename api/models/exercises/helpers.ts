@@ -33,14 +33,17 @@ export namespace ExercisesHelper {
     description: string,
     image: string,
     machine: number,
-    muscles: Array<Muscles>
+    muscles: Array<Muscles>,
+    instructions: string,
+    tips: string
   ): void => {
     const result = database
       .prepare(
-        "INSERT INTO exercises (name, category,description, image, machine) VALUES (?, ?, ?, ?, ?)"
+        "INSERT INTO exercises (name, category,description, image, machine, instructions, tips) VALUES (?, ?, ?, ?, ?, ? ,?)"
       )
-      .run(name, category, description, image, machine);
-
+      .run(name, category, description, image, machine, instructions, tips);
+    console.log(result.lastInsertRowid);
+    console.log(muscles);
     muscles.forEach((muscle) => {
       database
         .prepare(

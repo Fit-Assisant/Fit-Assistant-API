@@ -27,7 +27,9 @@ const createDatabase = (db: Database): void => {
     name VARCHAR NOT NULL,
     description VARCHAR NOT NULL,
     image VARCHAR NOT NULL,
-    machine BOOLEAN NOT NULL
+    machine BOOLEAN NOT NULL,
+    instructions VARCHAR NOT NULL,
+    tips VARCHAR NOT NULL
     )
     `
   ).run();

@@ -18,14 +18,25 @@ route.get("/load", (req: Request, res: Response) => {
 });
 
 route.post("/create", (req: Request, res: Response) => {
-  const { name, category, description, image, machine, muscles } = req.body;
+  const {
+    name,
+    category,
+    description,
+    image,
+    machine,
+    muscles,
+    instructions,
+    tips,
+  } = req.body;
   ExercisesService.createExercises(
     name,
     category,
     description,
     image,
     machine,
-    muscles
+    muscles,
+    instructions,
+    tips
   );
   res.sendStatus(201);
 });

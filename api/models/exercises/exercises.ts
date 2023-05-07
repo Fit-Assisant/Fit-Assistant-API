@@ -8,4 +8,6 @@ export interface Exercises {
   image: string;
   machine: number;
   muscles: Array<Muscles>;
+  instructions: string;
+  tips: string;
 }

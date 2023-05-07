@@ -23,13 +23,24 @@ export namespace ExercisesService {
     const data = jsonfile.readFileSync("./data/exercises.json");
     database.prepare("DELETE FROM exercises").run();
     data.forEach((exercises: Exercises) => {
+      const muscles: Array<Muscles> = [];
+      exercises.muscles.forEach((muscle) => {
+        muscles.push(
+          database
+            .prepare("SELECT * FROM muscles WHERE id = ?")
+            .get(muscle) as Muscles
+        );
+      });
+      exercises.muscles = muscles;
       ExercisesHelper.createExercises(
         exercises.name,
         exercises.category,
         exercises.description,
         exercises.image,
         exercises.machine,
-        exercises.muscles
+        exercises.muscles,
+        exercises.instructions,
+        exercises.tips
       );
     });
   };
@@ -39,7 +50,9 @@ export namespace ExercisesService {
     description: string,
     image: string,
     machine: number,
-    muscles: Array<Muscles>
+    muscles: Array<Muscles>,
+    instructions: string,
+    tips: string
   ): void => {
     ExercisesHelper.createExercises(
       name,
@@ -47,7 +60,9 @@ export namespace ExercisesService {
       description,
       image,
       machine,
-      muscles
+      muscles,
+      instructions,
+      tips
     );
   };
 
