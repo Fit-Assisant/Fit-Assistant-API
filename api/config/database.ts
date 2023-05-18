@@ -23,7 +23,6 @@ const createDatabase = (db: Database): void => {
     CREATE TABLE IF NOT EXISTS exercises
     (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
-    category INTEGER NOT NULL REFERENCES categories(id) ON DELETE CASCADE,
     name VARCHAR NOT NULL,
     description VARCHAR NOT NULL,
     image VARCHAR NOT NULL,
@@ -33,6 +32,18 @@ const createDatabase = (db: Database): void => {
     )
     `
   ).run();
+
+  db.prepare(
+    `
+    CREATE TABLE IF NOT EXISTS exercises_categories
+    (
+    category INTEGER NOT NULL REFERENCES categories(id) ON DELETE CASCADE,
+    exercise INTEGER NOT NULL REFERENCES exercises(id) ON DELETE CASCADE,
+    PRIMARY KEY (exercise)
+    )
+    `
+  ).run();
+
   db.prepare(
     `
     CREATE TABLE IF NOT EXISTS user
@@ -43,7 +54,8 @@ const createDatabase = (db: Database): void => {
     username VARCHAR NOT NULL,
     age INTEGER NOT NULL,
     sexe VARCHAR NOT NULL,
-    email VARCHAR NOT NULL
+    email VARCHAR NOT NULL,
+    keypass VARCHAR NOT NULL
     )
     `
   ).run();
@@ -98,6 +110,20 @@ const createDatabase = (db: Database): void => {
     )
     `
   ).run();
+
+  // db.prepare(
+  //   `
+  //   CREATE TABLE IF NOT EXISTS records
+  //   (
+  //     user INTEGER NOT NULL REFERENCES user(id) ON DELETE CASCADE,
+  //     exercise INTEGER NOT NULL REFERENCES exercises(id) ON DELETE CASCADE,
+  //     duration FLOAT DEFAULT NULL,
+  //     repetitions INTEGER DEFAULT NULL,
+  //     weight FLOAT DEFAULT NULL,
+  //     PRIMARY KEY (muscle, exercise)
+  //   )
+  //   `
+  // );
 };
 
 export { connection, database };
