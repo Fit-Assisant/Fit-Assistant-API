@@ -6,4 +6,5 @@ export interface User {
   age: number;
   sexe: string;
   email: string;
+  password: string;
 }

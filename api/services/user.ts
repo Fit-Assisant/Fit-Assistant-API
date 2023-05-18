@@ -27,7 +27,8 @@ export namespace UserService {
         user.username,
         user.age,
         user.sexe,
-        user.email
+        user.email,
+        user.password
       );
     });
   };
@@ -37,9 +38,18 @@ export namespace UserService {
     username: string,
     age: number,
     sexe: string,
-    email: string
+    email: string,
+    password: string
   ): void => {
-    UserHelper.createUser(firstname, lastname, username, age, sexe, email);
+    UserHelper.createUser(
+      firstname,
+      lastname,
+      username,
+      age,
+      sexe,
+      email,
+      password
+    );
   };
 
   export const getUserById = (id: string): User => {
@@ -48,5 +58,9 @@ export namespace UserService {
 
   export const deleteUserById = (id: string): void => {
     UserHelper.deleteUserById(id);
+  };
+
+  export const checkUser = (email: string, password: string): User => {
+    return UserHelper.checkUser(email, password);
   };
 }

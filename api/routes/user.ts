@@ -18,8 +18,17 @@ route.get("/load", (req: Request, res: Response) => {
 });
 
 route.post("/create", (req: Request, res: Response) => {
-  const { firstname, lastname, username, age, sexe, email } = req.body;
-  UserService.createUser(firstname, lastname, username, age, sexe, email);
+  const { firstname, lastname, username, age, sexe, email, password } =
+    req.body;
+  UserService.createUser(
+    firstname,
+    lastname,
+    username,
+    age,
+    sexe,
+    email,
+    password
+  );
   res.sendStatus(201);
 });
 
@@ -32,7 +41,17 @@ route.get("/:id", (req: Request, res: Response) => {
 route.get("/delete/:id", (req: Request, res: Response) => {
   const { id } = req.params;
   UserService.deleteUserById(id);
-  res.sendStatus(204);
+  res.sendStatus(200);
+});
+
+route.post("/check", (req: Request, res: Response) => {
+  const { email, password } = req.body;
+  const user = UserService.checkUser(email, password);
+  if (user) {
+    res.sendStatus(200);
+  } else {
+    res.sendStatus(404);
+  }
 });
 
 export default route;
