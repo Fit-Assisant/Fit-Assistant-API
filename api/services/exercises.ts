@@ -4,6 +4,7 @@ import { ExercisesHelper } from "../models/exercises/helpers";
 import { database } from "../config/database";
 import e from "express";
 import { Muscles } from "../models/muscles/muscles";
+import { Categories } from "../models/categories/categories";
 export namespace ExercisesService {
   export const getAllExercises = (): Array<Exercises> => {
     return ExercisesHelper.getAllExercises();
@@ -24,6 +25,9 @@ export namespace ExercisesService {
     database.prepare("DELETE FROM exercises").run();
     data.forEach((exercises: Exercises) => {
       const muscles: Array<Muscles> = [];
+      exercises.category = database
+        .prepare("SELECT * FROM categories WHERE id = ?")
+        .get(exercises.category) as Categories;
       exercises.muscles.forEach((muscle) => {
         muscles.push(
           database
@@ -44,9 +48,10 @@ export namespace ExercisesService {
       );
     });
   };
+
   export const createExercises = (
     name: string,
-    category: number,
+    category: Categories,
     description: string,
     image: string,
     machine: number,
