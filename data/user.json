@@ -1,1 +1,12 @@
-[{"id":1,"firstname":"Antoine","lastname":"Voillot","username":"Psykoxen","age":19,"sexe":"homme","email":"antoine.voillot@yahoo.fr"}]
+[
+  {
+    "id": 1,
+    "firstname": "Antoine",
+    "lastname": "Voillot",
+    "username": "Psykoxen",
+    "age": 19,
+    "sexe": "homme",
+    "email": "antoine.voillot@yahoo.fr",
+    "password": "53ce7d2a274fa36f4558655c56b8a8ade32cc369a819cb7df38fea470f4f9f16"
+  }
+]

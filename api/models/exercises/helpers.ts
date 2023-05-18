@@ -1,6 +1,7 @@
 import { Exercises } from "./exercises";
 import { database } from "../../config/database";
 import { Muscles } from "../muscles/muscles";
+import { Categories } from "../categories/categories";
 export namespace ExercisesHelper {
   export const getMusclesByExercisesId = (id: number): Array<Muscles> => {
     const data = database
@@ -17,19 +18,30 @@ export namespace ExercisesHelper {
     return muscles;
   };
 
+  export const getCategoriesByExercisesId = (id: number): Categories => {
+    const data = database
+      .prepare("SELECT category FROM exercises_categories WHERE exercise = ?")
+      .get(id) as any;
+    return database
+      .prepare("SELECT * FROM categories WHERE id = ?")
+      .get(data.category) as Categories;
+  };
+
   export const getAllExercises = (): Array<Exercises> => {
     const data = database
       .prepare("SELECT * FROM exercises")
       .all() as Array<Exercises>;
+
     data.forEach((exercise) => {
       exercise.muscles = getMusclesByExercisesId(exercise.id);
+      exercise.category = getCategoriesByExercisesId(exercise.id);
     });
     return data;
   };
 
   export const createExercises = (
     name: string,
-    category: number,
+    category: Categories,
     description: string,
     image: string,
     machine: number,
@@ -39,11 +51,14 @@ export namespace ExercisesHelper {
   ): void => {
     const result = database
       .prepare(
-        "INSERT INTO exercises (name, category,description, image, machine, instructions, tips) VALUES (?, ?, ?, ?, ?, ? ,?)"
+        "INSERT INTO exercises (name, description, image, machine, instructions, tips) VALUES ( ?, ?, ?, ?, ? ,?)"
       )
-      .run(name, category, description, image, machine, instructions, tips);
-    console.log(result.lastInsertRowid);
-    console.log(muscles);
+      .run(name, description, image, machine, instructions, tips);
+    database
+      .prepare(
+        "INSERT INTO exercises_categories (exercise, category) VALUES (?, ?)"
+      )
+      .run(result.lastInsertRowid, category.id);
     muscles.forEach((muscle) => {
       database
         .prepare(
@@ -58,6 +73,7 @@ export namespace ExercisesHelper {
       .prepare("SELECT * FROM exercises WHERE id = ?")
       .get(id) as Exercises;
     data.muscles = getMusclesByExercisesId(data.id);
+    data.category = getCategoriesByExercisesId(data.id);
     return data;
   };
 
