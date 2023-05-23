@@ -52,8 +52,6 @@ const createDatabase = (db: Database): void => {
     firstname VARCHAR NOT NULL,
     lastname VARCHAR NOT NULL,
     username VARCHAR NOT NULL,
-    age INTEGER NOT NULL,
-    sexe VARCHAR NOT NULL,
     email VARCHAR NOT NULL,
     keypass VARCHAR NOT NULL
     )

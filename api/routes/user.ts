@@ -18,17 +18,8 @@ route.get("/load", (req: Request, res: Response) => {
 });
 
 route.post("/create", (req: Request, res: Response) => {
-  const { firstname, lastname, username, age, sexe, email, password } =
-    req.body;
-  UserService.createUser(
-    firstname,
-    lastname,
-    username,
-    age,
-    sexe,
-    email,
-    password
-  );
+  const { firstname, lastname, username, email, password } = req.body;
+  UserService.createUser(firstname, lastname, username, email, password);
   res.sendStatus(201);
 });
 

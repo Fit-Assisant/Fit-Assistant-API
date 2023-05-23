@@ -25,8 +25,6 @@ export namespace UserService {
         user.firstname,
         user.lastname,
         user.username,
-        user.age,
-        user.sexe,
         user.email,
         user.password
       );
@@ -36,20 +34,10 @@ export namespace UserService {
     firstname: string,
     lastname: string,
     username: string,
-    age: number,
-    sexe: string,
     email: string,
     password: string
   ): void => {
-    UserHelper.createUser(
-      firstname,
-      lastname,
-      username,
-      age,
-      sexe,
-      email,
-      password
-    );
+    UserHelper.createUser(firstname, lastname, username, email, password);
   };
 
   export const getUserById = (id: string): User => {

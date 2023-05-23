@@ -10,24 +10,14 @@ export namespace UserHelper {
     firstname: string,
     lastname: string,
     username: string,
-    age: number,
-    sexe: string,
     email: string,
     password: string
   ): void => {
     database
       .prepare(
-        "INSERT INTO user (firstname, lastname, username, age, sexe, email, keypass) VALUES (?, ?, ?, ?, ?, ?, ?)"
+        "INSERT INTO user (firstname, lastname, username, email, keypass) VALUES (?, ?, ?, ?, ?)"
       )
-      .run(
-        firstname,
-        lastname,
-        username,
-        age,
-        sexe,
-        email,
-        SHA256(password).toString()
-      );
+      .run(firstname, lastname, username, email, SHA256(password).toString());
   };
 
   export const getUserById = (id: string): User => {
