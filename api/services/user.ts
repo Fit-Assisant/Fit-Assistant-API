@@ -51,4 +51,8 @@ export namespace UserService {
   export const checkUser = (email: string, password: string): User => {
     return UserHelper.checkUser(email, password);
   };
+
+  export const getUserByEmail = (email: string): User => {
+    return UserHelper.getUserByEmail(email);
+  };
 }
