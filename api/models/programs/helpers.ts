@@ -12,22 +12,13 @@ export namespace ProgramsHelper {
     programs.forEach((program: Programs) => {
       program.exercises = getDetailedProgramsById(program.id.toString());
     });
-    console.log(programs);
     return programs;
   };
 
-  export const createPrograms = (
-    user: number,
-    name: string,
-    description: string,
-    visible: number,
-    published: number
-  ): void => {
+  export const createPrograms = (name: string, difficulty: string): void => {
     database
-      .prepare(
-        "INSERT INTO programs (user, name, description, visible, published) VALUES (?, ?, ?, ?, ?)"
-      )
-      .run(user, name, description, visible, published);
+      .prepare("INSERT INTO programs (name,difficulty) VALUES (?, ?)")
+      .run(name, difficulty);
   };
 
   export const getDetailedProgramsById = (id: string): Array<Series> => {

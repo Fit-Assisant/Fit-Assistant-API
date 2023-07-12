@@ -63,11 +63,8 @@ const createDatabase = (db: Database): void => {
     CREATE TABLE IF NOT EXISTS programs
     (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
-    user INTEGER NOT NULL REFERENCES user(id) ON DELETE CASCADE,
     name VARCHAR NOT NULL,
-    description VARCHAR NOT NULL,
-    visible INTEGER NOT NULL DEFAULT 0,
-    published INTEGER NOT NULL DEFAULT 0
+    difficulty VARCHAR NOT NULL
     )
     `
   ).run();
