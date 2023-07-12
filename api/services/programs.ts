@@ -21,23 +21,11 @@ export namespace ProgramsService {
     const data = jsonfile.readFileSync("./data/programs.json");
     database.prepare("DELETE FROM programs").run();
     data.forEach((programs: Programs) => {
-      ProgramsHelper.createPrograms(
-        programs.user,
-        programs.name,
-        programs.description,
-        programs.visible,
-        programs.published
-      );
+      ProgramsHelper.createPrograms(programs.name, programs.difficulty);
     });
   };
-  export const createPrograms = (
-    user: number,
-    name: string,
-    description: string,
-    visible: number,
-    published: number
-  ): void => {
-    ProgramsHelper.createPrograms(user, name, description, visible, published);
+  export const createPrograms = (name: string, difficulty: string): void => {
+    ProgramsHelper.createPrograms(name, difficulty);
   };
 
   export const getProgramsById = (id: string): Programs => {

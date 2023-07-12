@@ -18,8 +18,8 @@ route.get("/load", (req: Request, res: Response) => {
 });
 
 route.post("/create", (req: Request, res: Response) => {
-  const { user, name, description, visible, published } = req.body;
-  ProgramsService.createPrograms(user, name, description, visible, published);
+  const { name, difficulty } = req.body;
+  ProgramsService.createPrograms(name, difficulty);
   res.sendStatus(201);
 });
 
